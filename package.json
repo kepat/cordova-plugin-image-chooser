@@ -1,0 +1,33 @@
+{
+    "name": "cordova-plugin-image-chooser",
+    "version": "0.0.0",
+    "description": "Cordova file image chooser plugin.",
+    "cordova": {
+      "id": "cordova-plugin-image-chooser",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "repository": "github:kepat/cordova-plugin-image-chooser",
+    "bugs": "https://github.com/kepat/cordova-plugin-image-chooser/issues",
+    "keywords": [
+      "cordova",
+      "image",
+      "chooser",
+      "ecosystem:cordova",
+      "cordova-android",
+      "cordova-ios"
+    ],
+    "author": "Kevin Patrick Tan",
+    "license": "Apache-2.0",
+    "engines": {
+      "cordovaDependencies": {
+        "0.0.0": {
+            "cordova": ">=10.0.0",
+            "cordova-android": ">=9.0.0",
+            "cordova-ios": ">=6.2.0"
+        }
+      }
+    }
+  }
