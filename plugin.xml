@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-image-chooser" version="0.0.0">
+
+    <name>Image Chooser</name>
+    <description>Cordova Image Chooser Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,image,chooser</keywords>
+    
+    <repo>https://github.com/kepat/cordova-plugin-image-chooser</repo>
+
+    <!-- frameworks supported -->
+    <engines>
+        <engine name="cordova" version=">=10.0.0"/>
+        <engine name="cordova-android" version=">=9.0.0" />
+        <engine name="cordova-ios" version=">=6.2.0" />
+    </engines>
+
+    <!-- javascript interface -->
+    <js-module src="www/ImageChooser.js" name="ImageChooser">
+        <clobbers target="imageChooser" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <!-- plugin -->
+            <feature name="ImageChooser">
+                <param name="android-package" value="com.kepat.cordova.chooser.ImageChooser"/>
+            </feature>
+        </config-file>
+
+        <!-- permissions -->
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <!-- source files -->
+        <source-file src="src/android/ImageChooser.java" target-dir="src/com/kepat/cordova/chooser" />
+    </platform>
+
+</plugin>
