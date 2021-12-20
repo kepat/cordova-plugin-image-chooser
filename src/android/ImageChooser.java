@@ -113,7 +113,7 @@ public class ImageChooser extends CordovaPlugin {
                 }
 
                 // If there was no URI
-                this.callbackContext.error("File URI was null.");
+                this.callbackContext.error("No selected files.");
 
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 this.callbackContext.error("User cancelled the action.");
