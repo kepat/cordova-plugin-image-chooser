@@ -40,4 +40,22 @@
         <source-file src="src/android/ImageChooser.java" target-dir="src/com/kepat/cordova/chooser" />
     </platform>
 
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <!-- plugin -->
+            <feature name="ImageChooser">
+                <param name="ios-package" value="ImageChooser"/>
+            </feature>
+        </config-file>
+
+        <!-- permissions -->
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>To access the photo library for app usage.</string>
+        </config-file>
+
+        <!-- source files -->
+        <source-file src="src/ios/ImageChooser.swift" />
+    </platform>
+
 </plugin>
