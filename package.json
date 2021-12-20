@@ -1,6 +1,6 @@
 {
     "name": "cordova-plugin-image-chooser",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Cordova file image chooser plugin.",
     "cordova": {
       "id": "cordova-plugin-image-chooser",
