@@ -42,15 +42,20 @@ To add these entries into the `info.plist`, you can use the `edit-config` tag in
 
 ---
 
-# API Reference <a name="reference"></a>
+# API Reference
 
-* [imageChooser(successCallback, errorCallback, options)](#imageChooser)
+* [imageChooser](#module_imageChooser)
+    * [.chooseImage(successCallback, errorCallback, options)](#module_imageChooser.chooseImage)
 
 ---
 
-<a name="imageChooser"></a>
+<a name="module_imageChooser"></a>
 
-### imageChooser(successCallback, errorCallback, options)
+## imageChooser
+
+<a name="module_imageChooser.chooseImage"></a>
+
+### imageChooser.chooseImage(successCallback, errorCallback, options)
 Retrieves a photo from the device's image gallery.
 The image is passed to the success callback as the URI for the image file(s).
 
@@ -59,7 +64,7 @@ __Supported Platforms__
 - Android
 - iOS
 
-**Kind**: static method of <code>[imageChooser](#imageChooser)</code>  
+**Kind**: static method of <code>[imageChooser](#module_imageChooser)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -69,7 +74,7 @@ __Supported Platforms__
 
 **Example**  
 ```js
-imageChooser(
+imageChooser.chooseImage(
     function(data) {
         console.log(data);
     }, 
