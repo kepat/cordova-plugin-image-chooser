@@ -23,7 +23,27 @@ It is also possible to install via repo url directly ( unstable )
 
 ### iOS Quirks
 
-Note: The plugin already includes a standard permission but just in case you want to specify a more specific reason for using the photo library follow the notes below:
+This plugin uses PHPicker API which requires iOS 14 and above for it to work.
+
+To set the default deployment target, you can use the `preference` tag in the `config.xml` like this:
+
+```
+<platform name="ios">
+    <preference name="deployment-target" value="14" />
+</platform>
+```
+
+This plugin uses swift code.
+
+To set the default swift version, you can use the `preference` tag in the `config.xml` like this:
+
+```
+<platform name="ios">
+    <preference name="SwiftVersion" value="4" />
+</platform>
+```
+
+Note: The plugin already includes a standard permission but just in case you want to specify a more specific reason for using the photo library follow the notes below.
 
 Since iOS 10 it's mandatory to provide an usage description in the `info.plist` if trying to access privacy-sensitive data. When the system prompts the user to allow access, this usage description string will displayed as part of the permission dialog box, but if you didn't provide the usage description, the app will crash before showing the dialog. Also, Apple will reject apps that access private data but don't provide an usage description.
 
