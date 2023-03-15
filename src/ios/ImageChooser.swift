@@ -79,14 +79,14 @@ import PhotosUI
         // Go through the selected files
         for result in results {
             // Load the image
-			result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
-				if let image = object as? UIImage {
+            result.itemProvider.loadDataRepresentation(forTypeIdentifier: "public.item") { (object, error)  in
+                if let image = object as? NSData {
                     DispatchQueue.main.async {
                         // Write the image
                         // @TODO: Handle different type of images
-                        if let data = UIImageJPEGRepresentation(image, 1), let filePath = self.generateTempFilePath("jpg") {
+                        if let filePath = self.generateTempFilePath("jpg") {
                             // Write the file
-                            try? data.write(to: filePath)
+                            try? image.write(to: filePath)
                             // Store to result
                             uriArray.append(filePath.absoluteString)
                         }
@@ -110,8 +110,8 @@ import PhotosUI
                             self.callback(pluginResult)
                         }
                     }
-				}
-			})
+                }
+            };
 		}
     }
 
