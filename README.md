@@ -7,19 +7,17 @@ description: Choose image(s) from the gallery.
 
 This is a cordova plugin that enables users to choose image(s) from the gallery.
 
-    ...
-
 There are existing repositories that enables this feature but this is created to cover some missing functionalities and simplify the code base.
 
 ## Installation
 
-This requires cordova 10.0+
-
-    cordova plugin add cordova-plugin-image-chooser
-
-It is also possible to install via repo url directly ( unstable )
+To install via repo url directly.
 
     cordova plugin add https://github.com/kepat/cordova-plugin-image-chooser
+
+### Quirks
+
+This requires cordova 10.0+
 
 ### iOS Quirks
 
@@ -84,13 +82,21 @@ __Supported Platforms__
 - Android
 - iOS
 
-**Kind**: static method of <code>[imageChooser](#module_imageChooser)</code>  
+__Inputs__
 
 | Param | Type | Description |
 | --- | --- | --- |
-| successCallback | <code>[onSuccess](#)</code> |  |
-| errorCallback | <code>[onError](#)</code> |  |
-| options | <code>[ImageChooserOptions](#)</code> | |
+| successCallback | <code>functionn</code> | The callback for success. |
+| errorCallback | <code>function</code> | Te callback for error. |
+| options | <code>[ImageChooserOptions](#module_imageChooser.chooseImage.ImageChooserOptions)</code> | The options to manipulate the function. |
+
+__ImageChooserOptions__
+
+<a name="module_imageChooser.chooseImage.ImageChooserOptions"></a>
+
+| Param | Type | Description |
+| --- | --- | --- |
+| multiple | <code>boolean</code> | Allow multiple selection. |
 
 **Example**  
 ```js
